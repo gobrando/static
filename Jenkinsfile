@@ -7,9 +7,9 @@ pipeline {
                     pwd()
                     withAWS(region:'us-east-2', credentials:'aws-static') {
                         s3Upload(pathStyleAccessEnabled: true, 
-                            payloadSigningEnabled: true, 
-                            file: "index.html", 
+                            payloadSigningEnabled: true,  
                             bucket:"jenkins-pipeline-uda", 
+                            includePathPattern:'**/*',
                             path: 'index.html')
                     }
                 }
