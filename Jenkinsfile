@@ -10,7 +10,6 @@ pipeline {
                             payloadSigningEnabled: true, 
                             file: "index.html", 
                             bucket:"jenkins-pipeline-uda", 
-                            includePathPattern:'**/*',
                             path: './index.html')
                     }
                 }
